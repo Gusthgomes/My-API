@@ -24,13 +24,13 @@ export class UserController {
   }
 
   @Get()
-  async read() {
-    return { users: ['gustavo', 'alice', 'lola'] };
+  async list() {
+    return this.userService.list();
   }
 
   @Get(':id')
-  async readOne(@Param('id', ParseIntPipe) id: number) {
-    return { user: {}, id };
+  async show(@Param('id', ParseIntPipe) id: number) {
+    return this.userService.show(id);
   }
 
   @Put(':id')
