@@ -13,7 +13,7 @@ import { UpdatePutUserDTO } from './dto/update-dto-put-user';
 import { UpdatePatchUserDTO } from './dto/update-dto-patch-user';
 import { UserService } from './user.service';
 import { LogInterceptor } from 'src/interceptors/log.interceptor';
-import { ParamId } from 'src/decarators/param-id-decorator';
+import { ParamId } from 'src/decorators/param-id-decorator';
 
 @UseInterceptors(LogInterceptor)
 @Controller('users')
